@@ -1,5 +1,3 @@
-import Preview from 'components/cms/Preview';
-
 type DefaultLayoutProps = {
   pageData: {
     data: {
@@ -56,9 +54,5 @@ export const StaffLayoutPreview = ({ entry }) => {
       },
     },
   };
-  return (
-    <Preview>
-      <StaffLayout {...data} />
-    </Preview>
-  );
+  return <StaffLayout {...data} />;
 };
