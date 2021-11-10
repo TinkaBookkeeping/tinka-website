@@ -1,22 +1,17 @@
-import { format, parseISO } from 'date-fns';
-import { GetStaticProps } from 'next';
-import Link from 'next/link';
-import React from 'react';
-import Layout from 'components/Layout';
-import { getAllPosts, getHomeData, HomeData } from '../lib/api';
-import { PostType } from '../types/post';
-import Shape from 'components/atoms/Shape';
+import Preview from 'components/cms/Preview';
 
-type IndexProps = {
-  posts: PostType[];
-  pageData: HomeData;
+type DefaultLayoutProps = {
+  pageData: {
+    data: {
+      name: string;
+      role: string;
+    };
+  };
 };
 
-export const Index = ({ pageData }: IndexProps): JSX.Element => {
+const StaffLayout = ({ pageData }: DefaultLayoutProps): JSX.Element => {
   return (
-    <Layout>
-      {JSON.stringify(pageData)}
-
+    <div>
       <div
         className="relative"
         style={{
@@ -43,18 +38,27 @@ export const Index = ({ pageData }: IndexProps): JSX.Element => {
             </div>
           </div>
         </div>
-        <Shape />
       </div>
-    </Layout>
+    </div>
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts(['date', 'description', 'slug', 'title']);
-  const pageData = getHomeData();
-  return {
-    props: { posts, pageData },
-  };
-};
+export default StaffLayout;
 
-export default Index;
+export const StaffLayoutPreview = ({ entry }) => {
+  const name = entry.getIn(['data', 'name']);
+  const role = entry.getIn(['data', 'role']);
+  const data: DefaultLayoutProps = {
+    pageData: {
+      data: {
+        name,
+        role,
+      },
+    },
+  };
+  return (
+    <Preview>
+      <StaffLayout {...data} />
+    </Preview>
+  );
+};

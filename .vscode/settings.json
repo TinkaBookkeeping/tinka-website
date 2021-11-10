@@ -1,0 +1,17 @@
+{
+  "git.ignoreLimitWarning": true,
+  "editor.formatOnSave": false,
+  // Enable per-language
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": "esbenp.prettier-vscode"
+  },
+  "[typescript]": { 
+    "editor.formatOnSave": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [
+    "firestore"
+  ]
+}

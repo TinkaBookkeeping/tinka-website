@@ -44,30 +44,30 @@ export function getAllPosts(fields: string[] = []): PostItems[] {
   return posts;
 }
 
-
 type PageData = {
   data: {
-    [key:string] : any,
-  },
-  content: string
-}
+    [key: string]: any;
+  };
+  content: string;
+};
 
-export function getPageData<P extends PageData>(path: string):P {
+export function getPageData<P extends PageData>(path: string): P {
   const fileContents = fs.readFileSync(path, 'utf8');
-  const { data, content } = matter(fileContents)
+  const { data, content } = matter(fileContents);
   return {
-    data, content
-  } as P
+    data,
+    content,
+  } as P;
 }
 
 export interface HomeData extends PageData {
   data: {
-    title: string,
-    data: Date,
-  }
+    title: string;
+    data: Date;
+  };
 }
 
-export function getHomeData():HomeData {
-  const data = getPageData<HomeData>('content/pages/home.mdx')
-  return data
+export function getHomeData(): HomeData {
+  const data = getPageData<HomeData>('content/pages/home.mdx');
+  return data;
 }

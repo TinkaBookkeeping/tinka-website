@@ -3,3 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  background-color: red !important;
+}
