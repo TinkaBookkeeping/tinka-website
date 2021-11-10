@@ -13,7 +13,7 @@ const CMS = dynamic(
       cms.init({ config });
       cms.registerPreviewTemplate('Pages', DefaultLayoutPreview);
       cms.registerPreviewTemplate('Staff', StaffLayoutPreview);
-      CMS.registerPreviewStyle('styles.css');
+      CMS.registerPreviewStyle('styles/global.css');
     }),
   {
     ssr: false,
