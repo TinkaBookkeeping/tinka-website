@@ -14,7 +14,12 @@ const CMS = dynamic(
       cms.init({ config });
       cms.registerPreviewTemplate('Pages', DefaultLayoutPreview);
       cms.registerPreviewTemplate('Staff', StaffLayoutPreview);
-      CMS.registerPreviewStyle('styles/global.css');
+      cms.registerPreviewStyle(
+        'https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css'
+      );
+      cms.registerPreviewStyle(
+        'https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css'
+      );
     }),
   {
     ssr: false,

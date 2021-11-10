@@ -8,10 +8,8 @@
   "[typescriptreact]": {
     "editor.formatOnSave": "esbenp.prettier-vscode"
   },
-  "[typescript]": { 
+  "[typescript]": {
     "editor.formatOnSave": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "firestore"
-  ]
+  "cSpell.words": ["firestore"]
 }
