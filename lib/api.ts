@@ -67,7 +67,19 @@ export interface HomeData extends PageData {
   };
 }
 
-export function getHomeData(): HomeData {
-  const data = getPageData<HomeData>('content/pages/home.mdx');
+export type Section = {
+  type: 'header' | 'content';
+  [key: string]: any;
+};
+export interface PageFieldData extends PageData {
+  data: {
+    title: string;
+    data: string;
+    sections: Section[];
+  };
+}
+
+export function getHomeData(): PageFieldData {
+  const data = getPageData<PageFieldData>('content/pages/home.md');
   return data;
 }

@@ -16,10 +16,10 @@ module.exports = {
   local_backend: true,
 
   // Where to store the images
-  media_folder: 'public/images/',
+  media_folder: '/public/images/',
 
   // Where to link the images
-  public_folder: 'public/images/',
+  public_folder: '/public/images/',
 
   // The Pages collection
   collections: [page, staff],

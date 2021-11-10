@@ -1,4 +1,7 @@
 import seo from 'cms/partials/seo';
+import pageAttributes from 'cms/partials/pageAttributes';
+
+import PageHeader from 'cms/sections/PageHeader';
 
 const page = {
   name: 'Pages',
@@ -30,6 +33,29 @@ const page = {
       default: '',
       required: false,
     },
+    {
+      label: 'Sections',
+      name: 'sections',
+      label_singular: 'Section',
+      widget: 'list',
+      types: [
+        PageHeader,
+        {
+          label: 'Content',
+          name: 'content',
+          widget: 'object',
+          fields: [
+            {
+              label: 'Content',
+              name: 'content',
+              widget: 'markdown',
+              required: true,
+            },
+          ],
+        },
+      ],
+    },
+    pageAttributes,
     seo,
   ],
 };

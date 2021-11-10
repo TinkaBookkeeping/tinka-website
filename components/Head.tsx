@@ -18,20 +18,32 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
 
   return (
     <NextHead>
-      <title>{meta.title}</title>
+      <title key="title">{meta.title}</title>
       <meta content={meta.description} name="description" />
       <meta property="og:url" content={`${WEBSITE_HOST_URL}${router.asPath}`} />
       <link rel="canonical" href={`${WEBSITE_HOST_URL}${router.asPath}`} />
-      <meta property="og:type" content={meta.type} />
       <meta property="og:site_name" content="Hunter Chang - Website" />
-      <meta property="og:description" content={meta.description} />
-      <meta property="og:title" content={meta.title} />
-      <meta property="og:image" content={meta.image} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@huntarosan" />
-      <meta name="twitter:title" content={meta.title} />
-      <meta name="twitter:description" content={meta.description} />
-      <meta name="twitter:image" content={meta.image} />
+      <meta key="og:type" property="og:type" content={meta.type} />
+      <meta
+        key="og:description"
+        property="og:description"
+        content={meta.description}
+      />
+      <meta key="og:title" property="og:title" content={meta.title} />
+      <meta key="og:image" property="og:image" content={meta.image} />
+      <meta
+        key="twitter:card"
+        name="twitter:card"
+        content="summary_large_image"
+      />
+      <meta key="twitter:site" name="twitter:site" content="@huntarosan" />
+      <meta key="twitter:title" name="twitter:title" content={meta.title} />
+      <meta
+        key="twitter:description"
+        name="twitter:description"
+        content={meta.description}
+      />
+      <meta key="twitter:image" name="twitter:image" content={meta.image} />
       {meta.date && (
         <meta property="article:published_time" content={meta.date} />
       )}
