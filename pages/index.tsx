@@ -3,17 +3,19 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import Layout from '../components/Layout';
-import { getAllPosts } from '../lib/api';
+import { getAllPosts, getHomeData, HomeData } from '../lib/api';
 import { PostType } from '../types/post';
 
 type IndexProps = {
   posts: PostType[];
+  pageData: HomeData;
 };
 
-export const Index = ({ posts }: IndexProps): JSX.Element => {
+export const Index = ({ posts, pageData }: IndexProps): JSX.Element => {
   return (
     <Layout>
       <h1>Home Page</h1>
+      {JSON.stringify(pageData)}
       <p>Next.js starter for your next blog or personal site. Built with:</p>
       <ul className="list-disc pl-4 my-6">
         <li>Next.js</li>
@@ -55,9 +57,9 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllPosts(['date', 'description', 'slug', 'title']);
-
+  const pageData = getHomeData()
   return {
-    props: { posts },
+    props: { posts, pageData },
   };
 };
 

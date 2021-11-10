@@ -43,3 +43,31 @@ export function getAllPosts(fields: string[] = []): PostItems[] {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
+
+
+type PageData = {
+  data: {
+    [key:string] : any,
+  },
+  content: string
+}
+
+export function getPageData<P extends PageData>(path: string):P {
+  const fileContents = fs.readFileSync(path, 'utf8');
+  const { data, content } = matter(fileContents)
+  return {
+    data, content
+  } as P
+}
+
+export interface HomeData extends PageData {
+  data: {
+    title: string,
+    data: Date,
+  }
+}
+
+export function getHomeData():HomeData {
+  const data = getPageData<HomeData>('content/pages/home.mdx')
+  return data
+}
