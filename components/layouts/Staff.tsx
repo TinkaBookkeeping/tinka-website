@@ -25,7 +25,7 @@ const StaffLayout = ({ pageData }: DefaultLayoutProps): JSX.Element => {
             style={{ height: 500 }}
           >
             <div>
-              <h1 className="text-7xl font-bold mb-8">{pageData.data.title}</h1>
+              <h1 className="text-7xl font-bold mb-8">{pageData.data.name}</h1>
               <p className="text-lg">
                 We specialise in working with SMEs across the Digital / Tech /
                 Software / eComm / Energy and Medical industries, providing top
