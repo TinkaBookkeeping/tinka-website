@@ -42,12 +42,13 @@ const ContactForm = (): JSX.Element => {
 
   const onSubmit = (data) => {
     const body = encode({
-      'form-name': 'Contact Us',
+      'form-name': 'contact-us',
       ...data,
     });
     // eslint-disable-next-line no-console
     console.log('onSubmit', data, body);
 
+    // https://docs.netlify.com/forms/setup/
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -96,9 +97,10 @@ const ContactForm = (): JSX.Element => {
 
         <div className="relative h-full col-span-5">
           <form
-            name="contact"
             method="POST"
+            netlify-honeypot="bot-field"
             data-netlify="true"
+            name="contact-us"
             onSubmit={handleSubmit(onSubmit)}
             //onError={() => console.log('E', errors)}
             //onErrorCapture={() => console.log('E')}
@@ -134,9 +136,6 @@ const ContactForm = (): JSX.Element => {
               register={register}
               error={errors.message?.message}
             />
-
-            {/* https://docs.netlify.com/forms/setup/ */}
-            <input type="hidden" name="form-name" value="Contact Us" />
 
             <button
               type="submit"
