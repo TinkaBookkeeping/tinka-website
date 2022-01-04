@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import Input from 'components/atoms/forms/Input';
+import { useRouter } from 'next/router';
 
 const schema = yup
   .object({
@@ -23,6 +24,7 @@ interface IFormValues {
 
 const ContactForm = (): JSX.Element => {
   const { offices } = useSiteSettings();
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -30,9 +32,28 @@ const ContactForm = (): JSX.Element => {
   } = useForm<IFormValues>({
     resolver: yupResolver(schema),
   });
+
+  const encode = (data) =>
+    Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+
   const onSubmit = (data) => {
     // eslint-disable-next-line no-console
-    console.log(data);
+    console.log('onSubmit', data);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'Contact Us',
+        ...data,
+      }),
+    })
+      .then(() => router.push('/thank-you/'))
+      .catch((_) => alert('Error'));
   };
 
   return (
@@ -112,6 +133,10 @@ const ContactForm = (): JSX.Element => {
               register={register}
               error={errors.message?.message}
             />
+
+            {/* https://docs.netlify.com/forms/setup/ */}
+            <input type="hidden" name="form-name" value="Contact Us" />
+
             <button
               type="submit"
               className="group transition-all border-orange-500 border-2 border-orange py-4 pl-8 pr-3 inline-block bg-orange text-white"

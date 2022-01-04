@@ -60,8 +60,8 @@ const Header = ({
       >
         <div className={`bg-gradient-to-t from-${background} to-transparent`}>
           <div
-            className="items-center lg:flex lg:h-10 lg:grid lg:grid-cols-12 gap-8 container mx-auto lg:px-0 px-4 "
-            style={{ minHeight: 620 }}
+            // className="items-center lg:flex lg:h-10 lg:grid lg:grid-cols-12 gap-8 container mx-auto lg:px-0 px-4 py-10"
+            className="items-center lg:flex lg:grid lg:grid-cols-12 gap-8 container mx-auto lg:px-0 px-4 py-0"
           >
             <div className="lg:col-span-5">
               <h1
@@ -90,8 +90,11 @@ const Header = ({
                 <Image
                   quality={100}
                   src={photo}
-                  layout="fill"
+                  width={700}
+                  height={700}
+                  //layout="responsive"
                   objectFit="contain"
+                  className="object-cover"
                 />
               )}
             </div>
