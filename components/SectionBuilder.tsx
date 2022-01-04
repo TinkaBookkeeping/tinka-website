@@ -17,5 +17,5 @@ const components = {
 export default function Builder(props: Section): JSX.Element {
   const { type, ...rest } = props;
   const Component = components[type];
-  return <Component {...rest} />;
+  return <Component {...(rest as any)} />;
 }

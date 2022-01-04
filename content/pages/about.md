@@ -5,7 +5,7 @@ title: About
 sections:
   - type: header
     style: dark
-    title: "The finance team that helps you do business better. "
+    title: 'The finance team that helps you do business better. '
     buttonLabel: Lets get stated
     buttonLink: /contact
   - type: 2col

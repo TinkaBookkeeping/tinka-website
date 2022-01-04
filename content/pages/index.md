@@ -4,8 +4,8 @@ sections:
   - type: header
     title: |-
       Get fast results from expert bookkeepers, starting at $349 a month
-    subtitle: "Tinka’s team of experts work with SMEs to deliver reliable,
-      stress-free bookkeeping. "
+    subtitle: 'Tinka’s team of experts work with SMEs to deliver reliable,
+      stress-free bookkeeping. '
     photo: /media/hero-image.png
     buttonLabel: Lets get stated
     buttonLink: /link
