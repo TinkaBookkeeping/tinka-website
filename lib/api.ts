@@ -1,7 +1,9 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+import yaml from 'js-yaml';
 import { join } from 'path';
 import { POSTS_PATH } from '../utils/mdxUtils';
+import { Office } from 'types/layout';
 
 export function getPostSlugs(): string[] {
   return fs.readdirSync(POSTS_PATH);
@@ -48,16 +50,53 @@ type PageData = {
   data: {
     [key: string]: any;
   };
-  content: string;
+  content: string | null;
 };
 
 export function getPageData<P extends PageData>(path: string): P {
-  const fileContents = fs.readFileSync(path, 'utf8');
-  const { data, content } = matter(fileContents);
-  return {
-    data,
-    content,
-  } as P;
+  try {
+    const fileContents = fs.readFileSync(`content/pages/${path}.md`, 'utf8');
+    const { data, content } = matter(fileContents);
+    return {
+      data,
+      content,
+    } as P;
+  } catch (error) {
+    return {
+      data: null,
+      content: null,
+    } as P;
+  }
+}
+
+export function getPagePaths(): string[] {
+  const files = fs.readdirSync(join('content', 'pages'));
+  return files.map((f) => f.replace('.md', ''));
+}
+
+export type TeamListData = {
+  slug: string;
+  pageData: PageData;
+};
+
+export function getTeamMembers(): TeamListData[] {
+  const files = fs.readdirSync(join('content', 'staff'));
+  const staff = files.map((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const fileContents = fs.readFileSync(
+      join('content', 'staff', fileName),
+      'utf8'
+    );
+    const { data, content } = matter(fileContents) as PageData;
+    return {
+      slug,
+      pageData: {
+        data,
+        content,
+      },
+    } as TeamListData;
+  });
+  return staff;
 }
 
 export interface HomeData extends PageData {
@@ -68,7 +107,7 @@ export interface HomeData extends PageData {
 }
 
 export type Section = {
-  type: 'header' | 'content';
+  type: 'header' | 'content' | '2col';
   [key: string]: any;
 };
 export interface PageFieldData extends PageData {
@@ -77,6 +116,15 @@ export interface PageFieldData extends PageData {
     data: string;
     sections: Section[];
   };
+}
+
+export type SiteData = {
+  offices: Office[];
+};
+
+export function getSiteData(): SiteData {
+  const data = yaml.load(fs.readFileSync(`config/siteSettings.yaml`, 'utf8'));
+  return data as SiteData;
 }
 
 export function getHomeData(): PageFieldData {

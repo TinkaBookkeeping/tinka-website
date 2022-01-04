@@ -7,7 +7,7 @@ module.exports = {
     {
       label: 'Title',
       name: 'title',
-      widget: 'string',
+      widget: 'text',
       required: true,
     },
     {
@@ -17,16 +17,26 @@ module.exports = {
       required: false,
     },
     {
+      label: 'Style',
+      name: 'style',
+      widget: 'select',
+      options: ['light', 'dark', 'alt'],
+      default: 'light',
+      hint: 'Changes the background and text color',
+    },
+    {
       label: 'Button label',
       name: 'buttonLabel',
       widget: 'string',
       required: false,
+      hint: 'The text that appears in the "Call to action" button',
     },
     {
       label: 'Button link',
       name: 'buttonLink',
       widget: 'string',
       required: false,
+      hint: 'Where the "Call to action" button will link too',
     },
     {
       label: 'Image',

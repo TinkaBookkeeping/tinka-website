@@ -2,3 +2,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  p, h1, h2, h3, h4, h5, h6 {
+    color: #31334D;
+  }
+  a {
+    @apply text-orange-500;
+  }
+
+  .stylistic-quote-mark {
+    @apply mr-2 hidden text-blue-500 absolute top-0 leading-none z-0 font-serif;
+    font-size: 7rem;
+    right: 100%;
+    opacity: 0.2;
+  }
+  
+  @screen sm {
+    .stylistic-quote-mark {
+      @apply block;
+    }
+  }
+}
+
+.black-and-white {
+  filter: grayscale(100%) contrast(120%) brightness(120%)
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container > div {
+  position: unset !important;
+}
+
+ .image-container > img {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
+

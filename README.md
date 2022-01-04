@@ -30,3 +30,9 @@ npm run dev
 ```
 
 Your new site will be up at http://localhost:3000/
+
+CMS
+
+```bash
+ npx netlify-cms-proxy-server
+```

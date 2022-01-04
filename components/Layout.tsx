@@ -2,7 +2,10 @@ import React from 'react';
 import { MetaProps } from '../types/layout';
 import Head from './Head';
 import Navigation from './Navigation';
-import ThemeSwitch from './ThemeSwitch';
+import GiveAway from './modules/GiveAway';
+import CallToAction from 'components/modules/CallToAction';
+import Footer from 'components/modules/Footer';
+//import ThemeSwitch from './ThemeSwitch';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -17,15 +20,15 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
       <Head customMeta={customMeta} />
 
       <header>
-        <div className="mx-auto">
-          <div className="flex items-center justify-between py-6 z-10 bg-white w-full">
-            <Navigation />
-            <ThemeSwitch />
-          </div>
-        </div>
+        <Navigation />
+        {/* <ThemeSwitch /> */}
       </header>
 
-      <main>{children}</main>
+      <main className="md:pt-20">{children}</main>
+
+      <CallToAction />
+      <GiveAway />
+      <Footer />
     </>
   );
 };

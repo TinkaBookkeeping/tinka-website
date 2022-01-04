@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
 import config from 'cms/config';
-import { DefaultLayoutPreview } from 'components/layouts/Default';
+import { Preview } from 'pages/[slug]';
 import { StaffLayoutPreview } from 'components/layouts/Staff';
 
 const CMS = dynamic(
@@ -13,14 +13,9 @@ const CMS = dynamic(
     import('netlify-cms-app').then((cms) => {
       cms.init({ config });
 
-      cms.registerPreviewTemplate('Pages', DefaultLayoutPreview);
+      cms.registerPreviewTemplate('Pages', Preview);
       cms.registerPreviewTemplate('Staff', StaffLayoutPreview);
-      cms.registerPreviewStyle(
-        'https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css'
-      );
-      cms.registerPreviewStyle(
-        'https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css'
-      );
+      cms.registerPreviewStyle('preview.css');
     }),
   {
     ssr: false,

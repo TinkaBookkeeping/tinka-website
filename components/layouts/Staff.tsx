@@ -3,6 +3,7 @@ type DefaultLayoutProps = {
     data: {
       name: string;
       role: string;
+      photo: string;
     };
   };
 };
@@ -27,12 +28,12 @@ const StaffLayout = ({ pageData }: DefaultLayoutProps): JSX.Element => {
               <p className="text-lg">
                 We specialise in working with SMEs across the Digital / Tech /
                 Software / eComm / Energy and Medical industries, providing top
-                quality bookkeeping
+                quality bookkeeping.
               </p>
             </div>
 
             <div>
-              <img className="h-1/2" src="/assets/hero-image.png" />
+              <img className="h-1/2" src={pageData.data.photo} />
             </div>
           </div>
         </div>
@@ -43,14 +44,16 @@ const StaffLayout = ({ pageData }: DefaultLayoutProps): JSX.Element => {
 
 export default StaffLayout;
 
-export const StaffLayoutPreview = ({ entry }) => {
+export const StaffLayoutPreview = ({ entry }: { entry: any }): JSX.Element => {
   const name = entry.getIn(['data', 'name']);
   const role = entry.getIn(['data', 'role']);
+  const photo = entry.getIn(['data', 'photo']);
   const data: DefaultLayoutProps = {
     pageData: {
       data: {
         name,
         role,
+        photo,
       },
     },
   };

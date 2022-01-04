@@ -7,9 +7,10 @@ const staff = {
   label_singular: 'Staff',
   create: true,
   folder: 'content/staff',
-  slug: '{{slug}}',
+  slug: '{{name}}',
   extension: 'md',
   format: 'yaml-frontmatter',
+  identifier_field: 'name',
   fields: [
     {
       label: 'Name',
@@ -25,8 +26,15 @@ const staff = {
       default: '',
       required: false,
     },
-    seo,
+    {
+      label: 'Image',
+      name: 'photo',
+      widget: 'image',
+      required: false,
+      media_library: { config: { multiple: false } },
+    },
   ],
+  ...seo,
 };
 
 export default staff;

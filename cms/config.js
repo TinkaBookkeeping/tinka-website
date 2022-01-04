@@ -1,5 +1,6 @@
 import page from 'cms/page';
 import staff from 'cms/staff';
+import settings from 'cms/siteSettings';
 
 module.exports = {
   // We want to manually init the config file
@@ -16,11 +17,11 @@ module.exports = {
   local_backend: true,
 
   // Where to store the images
-  media_folder: '/public/images/',
+  media_folder: '/public/media/',
 
   // Where to link the images
-  public_folder: '/public/images/',
+  public_folder: '/media/',
 
   // The Pages collection
-  collections: [page, staff],
+  collections: [page, staff, settings],
 };

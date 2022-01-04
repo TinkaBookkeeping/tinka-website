@@ -7,3 +7,17 @@ export interface MetaProps
    */
   type?: string;
 }
+
+export type Office = {
+  title: string;
+  address: string;
+  addressRegion: string;
+  addressLocality: string;
+  postalCode: string;
+  phone: string;
+  map: string;
+};
+
+export type SiteSettings = {
+  offices: Office[];
+};
