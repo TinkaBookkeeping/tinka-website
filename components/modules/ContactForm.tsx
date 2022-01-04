@@ -41,16 +41,17 @@ const ContactForm = (): JSX.Element => {
       .join('&');
 
   const onSubmit = (data) => {
+    const body = encode({
+      'form-name': 'Contact Us',
+      ...data,
+    });
     // eslint-disable-next-line no-console
-    console.log('onSubmit', data);
+    console.log('onSubmit', data, body);
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'Contact Us',
-        ...data,
-      }),
+      body,
     })
       .then(() => router.push('/thank-you/'))
       .catch((_) => alert('Error'));
