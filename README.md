@@ -1,6 +1,8 @@
-# NextJS - Typescript - MDX - Blog
+# TINKA website
 
-A Next.js starter for your next blog or personal site. Built with:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e242bf77-b96f-4bd5-94f0-fca06237810c/deploy-status)](https://app.netlify.com/sites/heuristic-leakey-043630/deploys)
+
+The TINKA website build on next.js
 
 - [Typescript](https://www.typescriptlang.org/)
 - Write posts with [MDX](https://mdxjs.com/)
@@ -9,17 +11,11 @@ A Next.js starter for your next blog or personal site. Built with:
 - Formatting with [Prettier](https://prettier.io/)
 - Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
-
-This Starter is **heavily** inspired by [Lee Robinson](https://github.com/leerob/leerob.io) and [Anson Lichtfuss](https://github.com/ansonlichtfuss/website).
-
-👀 [View the Live Demo](https://nextjs-typescript-mdx-blog.vercel.app/)
-
+- Deployed to Netlify
+- CMS with NetlifyCMS
 ## Getting Started
 
 ```bash
-git clone https://github.com/ChangoMan/nextjs-typescript-mdx-blog.git
-cd nextjs-typescript-mdx-blog
-
 yarn install
 # or
 npm install
@@ -27,12 +23,10 @@ npm install
 yarn dev
 # or
 npm run dev
+
+# Optional run CMS
+npx netlify-cms-proxy-server
 ```
 
 Your new site will be up at http://localhost:3000/
 
-CMS
-
-```bash
- npx netlify-cms-proxy-server
-```
