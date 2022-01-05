@@ -79,6 +79,30 @@ export type TeamListData = {
   pageData: PageData;
 };
 
+export type ClientListData = {
+  name: string;
+  url?: string;
+  image: string;
+};
+
+export function getClients(): ClientListData[] {
+  const files = fs.readdirSync(join('content', 'clients.yaml'));
+  const clients = files.map((fileName) => {
+    const fileContents = fs.readFileSync(
+      join('content', 'client', fileName),
+      'utf8'
+    );
+    const { data } = matter(fileContents) as PageData;
+    const { name, url, image } = data;
+    return {
+      name,
+      url,
+      image,
+    } as ClientListData;
+  });
+  return clients;
+}
+
 export function getTeamMembers(): TeamListData[] {
   const files = fs.readdirSync(join('content', 'staff'));
   const staff = files.map((fileName) => {

@@ -69,8 +69,10 @@ const GiveAway = (): JSX.Element => {
                 <button
                   disabled={!isValid}
                   type="submit"
-                  className={`group transition-all border-orange-500 border-2 border-orange py-4 pl-8 pr-3 inline-block text-white md:ml-auto ${
-                    isValid ? 'bg-orange' : 'bg-transparent'
+                  className={`group transition-all border-orange-500 border-2 border-orange py-4 pl-8 inline-block text-white md:ml-auto ${
+                    isValid
+                      ? 'bg-orange pr-3 hover:pr-8'
+                      : 'bg-transparent pr-8'
                   }`}
                 >
                   <div className="flex item-center">

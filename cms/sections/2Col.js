@@ -22,6 +22,7 @@ module.exports = {
       name: 'isImageFeature',
       widget: 'boolean',
       default: false,
+      required: false,
     },
   ],
 };

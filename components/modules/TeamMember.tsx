@@ -27,7 +27,7 @@ const TeamMember = ({ name, role, photo }: TeamMemberProps): JSX.Element => {
   return (
     <div className="text-center">
       <div
-        className="mb-4 bg-alt hover:bg-orange-100 relative transition-all duration-700"
+        className="mb-4 bg-alt hover:bg-orange-100 relative transition-all duration-700 p-0"
         onMouseOver={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
       >
@@ -59,7 +59,6 @@ const TeamMember = ({ name, role, photo }: TeamMemberProps): JSX.Element => {
           // placeholder="blur" // Optional blur-up while loading
         />
       </div>
-
       <h1 className="font-bold text-2xl">{name}</h1>
       <h2>{role}</h2>
     </div>

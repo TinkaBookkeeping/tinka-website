@@ -33,8 +33,8 @@ const staff = {
       required: false,
       media_library: { config: { multiple: false } },
     },
+    seo,
   ],
-  ...seo,
 };
 
 export default staff;

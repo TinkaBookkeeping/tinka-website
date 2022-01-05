@@ -18,7 +18,7 @@ const MenuItem = ({ label, href }: MenuItemProps) => {
       <a
         className={`${
           isActive ? 'text-orange-500' : 'text-gray-900'
-        } dark:text-white px-6 py-4 animate-fadeUp font-bold text-5xl md:text-lg md:font-normal hover:text-orange-400 m-0 p-0`}
+        } dark:text-white px-6 py-4 font-bold text-5xl md:text-lg md:font-normal hover:text-orange-400 m-0 p-0`}
       >
         {label}
       </a>

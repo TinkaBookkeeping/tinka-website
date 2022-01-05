@@ -5,6 +5,8 @@ import PageHeader from 'cms/sections/PageHeader';
 import TwoCol from 'cms/sections/2Col';
 import ContactForm from 'cms/sections/ContactForm';
 import Testimonial from 'cms/sections/Testimonial';
+import Clients from 'cms/sections/Clients';
+import GridText from 'cms/sections/GridText';
 
 const page = {
   name: 'Pages',
@@ -47,6 +49,8 @@ const page = {
         TwoCol,
         Testimonial,
         ContactForm,
+        Clients,
+        GridText,
         {
           label: 'Content',
           name: 'content',

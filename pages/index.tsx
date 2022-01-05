@@ -43,6 +43,7 @@ export const Index = ({ pageData }: IndexProps): JSX.Element => {
           content={pageData?.data?.title}
         />
       </Head>
+
       {pageData?.data?.sections.map(
         (section: Section, index: number) =>
           (<SectionBuilder {...section} key={index} />) as JSX.Element

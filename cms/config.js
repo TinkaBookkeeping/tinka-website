@@ -1,5 +1,6 @@
 import page from 'cms/page';
 import staff from 'cms/staff';
+import clients from 'cms/clients';
 import settings from 'cms/siteSettings';
 
 module.exports = {
@@ -23,5 +24,5 @@ module.exports = {
   public_folder: '/media/',
 
   // The Pages collection
-  collections: [page, staff, settings],
+  collections: [page, staff, clients, settings],
 };

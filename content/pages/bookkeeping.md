@@ -4,14 +4,14 @@ type: page
 title: Bookkeeping
 sections:
   - type: header
-    title: 'Bookkeeping for today’s SME needs. '
-    subtitle: 'Your time is too valuable to spend recnciling invoices and doing
+    title: "Bookkeeping for today’s SME needs. "
+    subtitle: "Your time is too valuable to spend recnciling invoices and doing
       payruns. That’s why we use the latest software and proprietry workflow to
-      ensure that your books are kept up to date faster than ever. '
-    photo: /media/hero-image.png
+      ensure that your books are kept up to date faster than ever. "
+    photo: ""
     buttonLabel: Lets get stated
     buttonLink: /contact
-    style: light
+    style: dark
   - type: 2col
     content: >-
       # Process and flows for businesses that want to move fast.

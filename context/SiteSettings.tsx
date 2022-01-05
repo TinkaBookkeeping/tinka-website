@@ -6,7 +6,11 @@ const sampleAppContext: SiteSettings = data;
 
 const AppCtx = React.createContext<SiteSettings>(sampleAppContext);
 
-const Provider = ({ children }): JSX.Element => (
+const Provider = ({
+  children,
+}: {
+  children?: React.ReactNode;
+}): JSX.Element => (
   <AppCtx.Provider value={sampleAppContext}>{children}</AppCtx.Provider>
 );
 
