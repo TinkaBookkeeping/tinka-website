@@ -1,7 +1,7 @@
 import * as React from 'react';
 const data = require('content/clients.yaml');
 
-type Client = {
+export type Client = {
   name: string;
   website?: string;
   logo: string;
