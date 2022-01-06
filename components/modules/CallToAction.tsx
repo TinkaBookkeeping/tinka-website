@@ -6,7 +6,7 @@ const CallToAction = (): JSX.Element => (
   <div className="mt-65">
     <Shape color="blue-500" />
     <section className="bg-blue-500 text-white py-20">
-      <div className="container lg:mx-auto mx-4  items-center lg:flex lg:grid lg:grid-cols-2 lg:gap-8">
+      <div className="container lg:mx-auto px-4 items-center lg:flex lg:grid lg:grid-cols-2 lg:gap-8">
         <h2 className="font-bold text-4xl md:text-5xl text-white mb-8 lg:mb-0">
           Let the experts streamline your bookkeeping
         </h2>

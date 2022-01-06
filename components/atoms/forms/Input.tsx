@@ -31,7 +31,7 @@ const Input = <T extends FieldValues>({
       type={type}
       name={name}
       style={{ backgroundColor: 'transparent' }}
-      className={`w-full bg-transparent text-4xl font-bold border-b border-grey-600 p-4 focus:outline-none ${
+      className={`w-full bg-transparent text-xl md:text-4xl font-bold border-b border-grey-600 p-4 focus:outline-none ${
         error ? ' border border-red-500 b' : ''
       }`}
       placeholder={placeholder}

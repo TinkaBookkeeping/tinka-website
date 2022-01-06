@@ -7,7 +7,7 @@ sections:
       stress-free bookkeeping. '
     photo: /media/hero-image.png
     buttonLabel: Lets get stated
-    buttonLink: /link
+    buttonLink: /contact
     style: light
   - type: grid-text
     title: The TINKA difference

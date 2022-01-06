@@ -60,7 +60,7 @@ const ContactForm = (): JSX.Element => {
 
   return (
     <section>
-      <div className="container mx-auto flex grid lg:grid-cols-12 gap-8 py-20">
+      <div className="container mx-auto flex grid lg:grid-cols-12 gap-8 py-20 lg:px-0 px-4">
         <div className="col-span-5 lg:col-start-2">
           {offices.map((office, index) => (
             <div
