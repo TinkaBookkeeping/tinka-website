@@ -10,6 +10,9 @@ module.exports = {
     safelist: [
       'bg-orange-100',
       'bg-blue-800',
+      'bg-blue-500',
+      'from-blue-500',
+      'from-alt',
       'text-blue-800',
       'bg-green-100',
       'bg-transparent',
@@ -17,6 +20,8 @@ module.exports = {
       'duration-100',
       'duration-400',
       'duration-600',
+      'to-transparent',
+      'bg-gradient-to-t',
       'list-inside',
     ],
   },

@@ -13,6 +13,7 @@ The TINKA website build on next.js
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 - Deployed to Netlify
 - CMS with NetlifyCMS
+
 ## Getting Started
 
 ```bash
@@ -29,4 +30,3 @@ npx netlify-cms-proxy-server
 ```
 
 Your new site will be up at http://localhost:3000/
-
