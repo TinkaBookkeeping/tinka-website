@@ -16,7 +16,7 @@ const GridText = ({
   columns = [],
 }: GridTextProps): JSX.Element => (
   <section>
-    <div className="container mx-auto lg:px-0 px-4 py-40">
+    <div className="container mx-auto lg:px-0 px-4 py-10 lg:py-20">
       <div className="mx-auto items-center lg:flex lg:grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4 lg:col-start-2">
           <H1>{title}</H1>
@@ -25,7 +25,7 @@ const GridText = ({
         <div className="lg:col-span-6 lg:col-start-0  ">
           <p className="text-xl mb-8">{subTitle}</p>
 
-          <div className="grid grid-cols-3 gap-4 mb-8">
+          <div className="grid md:grid-cols-3 gap-4 mb-8">
             {columns.map((col, i) => (
               <div key={`grid-col-${i}`}>
                 <h3 className="text-2xl font-bold mb-4">{col.title}</h3>

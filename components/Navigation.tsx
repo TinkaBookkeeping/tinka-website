@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { ArrowRightIcon } from '@heroicons/react/solid';
 import useMediaQuery from 'hooks/useMediaQuery';
@@ -18,7 +18,7 @@ const MenuItem = ({ label, href }: MenuItemProps) => {
       <a
         className={`${
           isActive ? 'text-orange-500' : 'text-gray-900'
-        } dark:text-white px-6 py-4 font-bold text-5xl md:text-lg md:font-normal hover:text-orange-400 m-0 p-0`}
+        } dark:text-white px-6 py-4 font-bold text-4xl md:text-lg md:font-normal hover:text-orange-400 m-0 p-0`}
       >
         {label}
       </a>
@@ -29,6 +29,12 @@ const MenuItem = ({ label, href }: MenuItemProps) => {
 const Navigation = (): JSX.Element => {
   const [open, setOpen] = useState(false);
   const isMobile = useMediaQuery('(max-width: 960px)');
+  const { asPath } = useRouter();
+
+  // close the menu when the path changes
+  useEffect(() => {
+    setOpen(false);
+  }, [asPath]);
 
   const showMenu = (isMobile && open) || !isMobile;
 
@@ -73,7 +79,7 @@ const Navigation = (): JSX.Element => {
             <MenuItem label="About" href="/about" />
             <div className="w-auto flex" />
             <Link href="/contact">
-              <a className="group transition-all border-orange-500 border-2 border-orange py-4 pl-8 pr-3 inline-block bg-orange text-white font-bold text-5xl md:text-lg md:font-normal m-4 md:m-0 md:ml-auto">
+              <a className="group transition-all border-orange-500 border-2 border-orange py-4 pl-8 pr-3 inline-block bg-orange text-white font-bold text-3xl md:text-lg md:font-normal m-4 md:m-0 md:ml-auto">
                 <div className="flex item-center">
                   Get in touch
                   <ArrowRightIcon className="transition-all w-6 h-6 opacity-0 group-hover:ml-5 group-hover:opacity-100" />

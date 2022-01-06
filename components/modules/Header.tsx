@@ -49,7 +49,7 @@ const Header = ({
   const text = style === 'dark' ? 'white' : 'blue-500';
 
   return (
-    <div className={` z-0 bg-${background}`}>
+    <div className={`z-0 bg-${background}`}>
       <div
         className="pt-36 md:pt-10"
         style={{
@@ -61,12 +61,12 @@ const Header = ({
         <div className={`bg-gradient-to-t from-${background} to-transparent`}>
           <div
             // className="items-center lg:flex lg:h-10 lg:grid lg:grid-cols-12 gap-8 container mx-auto lg:px-0 px-4 py-10"
-            className="items-center lg:flex lg:grid lg:grid-cols-12 gap-12 container mx-auto lg:px-0 px-4 py-0"
+            className="items-center lg:flex lg:grid lg:grid-cols-12 gap-12 container mx-auto xl:px-0 px-4 py-0"
           >
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 lg:pt-10">
               <h1
                 style={{ whiteSpace: 'pre-line' }}
-                className={`animate-fadeUp md:text-7xl text-3xl font-bold mb-8 text-${text}`}
+                className={`animate-fadeUp md:text-7xl text-4xl font-bold mb-8 text-${text}`}
               >
                 {title}
               </h1>

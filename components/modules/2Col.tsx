@@ -15,8 +15,8 @@ type ImageType = {
 const BasicImage = ({ src }: ImageType): JSX.Element => (
   <Image
     quality={100}
-    width={800}
-    height={1200}
+    width={400}
+    height={400}
     objectFit="contain"
     className="object-cover w-full"
     src={src}
