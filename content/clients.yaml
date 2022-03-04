@@ -1,31 +1,34 @@
 clients:
-  - name: Andzen
-    logo: /media/andzen-logo.png
-    website: http://andzen.co
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Adzen
-    logo: /media/andzen-logo.png
-    website: https://adzen.com
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
-  - name: Hatch Head
-    logo: /media/andzen-logo.png
+  - name: Connect Office
+    logo: /media/connect-offices.png
+    website: https://connectoffices.com.au/
+  - name: Convert Digital
+    logo: /media/convert-digital.png
+    website: https://www.convertdigital.com.au/
+  - name: Elephant Room
+    logo: /media/elephant-room.png
+    website: https://elephantroom.com.au/
+  - name: JRNY Digital
+    logo: /media/jrny-digital.png
+    website: https://www.jrnydigital.com.au/
+  - name: Maker Street
+    logo: /media/maker-street.png
+    website: https://mkrst.co/
+  - name: Fyber
+    logo: /media/fyber.png
+    website: https://fyber.com.au/
+  - name: PPC Samurai
+    logo: /media/ppc-samurai.png
+    website: https://www.ppcsamurai.com/
+  - name: Proactive Perio
+    logo: /media/proactive-eperio.png
+    website: https://www.proactiveperio.com/
+  - name: G Squared
+    logo: /media/g-squared.png
+    website: https://www.gsquared.com.au/
+  - name: Station Five
+    logo: /media/station-five.png
+    website: https://www.stationfive.com/
+  - name: WebSavvy
+    logo: /media/web-savvy.png
+    website: https://www.websavvy.com.au/
