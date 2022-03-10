@@ -28,14 +28,16 @@ const GridText = ({
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             {columns.map((col, i) => (
               <div key={`grid-col-${i}`}>
-                <h3 className="text-2xl font-bold mb-4">{col.title}</h3>
+                <div className="md:h-20">
+                  <h3 className="text-2xl font-bold mb-4">{col.title}</h3>
+                </div>
                 <p>{col.content}</p>
               </div>
             ))}
           </div>
 
           <div className="col-span-12">
-            <Link href="/contact-us">
+            <Link href="/contact">
               <a className="animate-fadeUp group transition-all border-orange-500 border-2 border-orange py-4 px-8 inline-block bg-orange text-white">
                 Find out how
               </a>

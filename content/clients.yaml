@@ -29,6 +29,9 @@ clients:
   - name: Station Five
     logo: /media/station-five.png
     website: https://www.stationfive.com/
-  - name: WebSavvy
-    logo: /media/web-savvy.png
-    website: https://www.websavvy.com.au/
+  - name: HatchHead
+    logo: /media/hatchhead.png
+    website: https://hatchhead.co
+  - name: Drought Master
+    logo: /media/droughtmaster.png
+    website: https://www.droughtmaster.com.au

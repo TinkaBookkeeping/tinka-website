@@ -61,7 +61,6 @@ export const Preview = ({ entry }: CmsWidgetPreviewProps): JSX.Element => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  //const arr: string[] = ['bookkeeping', 'contact-us', 'index'];
   const arr = getPagePaths();
   const paths = arr.map((slug) => {
     return {

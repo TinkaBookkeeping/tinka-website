@@ -1,6 +1,6 @@
 offices:
   - title: Brisbane
-    phone: 0449 633 962
+    phone: +61 7 4428 7437
     address: |-
       Unit 26 / 53 Vernon Tce,
       Teneriffe
@@ -8,12 +8,3 @@ offices:
     addressLocality: Brisbane
     postalCode: '4005'
     map: https://www.google.com/maps/place/Tinka+Consulting/@-27.4531029,153.0480078,18z/data=!3m1!4b1!4m5!3m4!1s0x6b91513b02e74647:0x9ae6e6d1dc0caef1!8m2!3d-27.4742499!4d153.0121357
-  - address: |-
-      Suite 3, Level 3 2-12 Foveaux Street,
-      Surry Hills
-    title: Sydney
-    phone: 0449 633 962
-    postalCode: '2010'
-    addressRegion: Queensland
-    addressLocality: Brisbane
-    map: https://www.google.com/maps?ll=-33.883553,151.209322&z=16&t=m&hl=en&gl=AU&mapclient=embed&q=2/12+Foveaux+St+Surry+Hills+NSW+2010
