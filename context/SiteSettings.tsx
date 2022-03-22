@@ -14,6 +14,6 @@ const Provider = ({
   <AppCtx.Provider value={sampleAppContext}>{children}</AppCtx.Provider>
 );
 
-export const useSiteSettings = () => React.useContext(AppCtx);
+export const useSiteSettings = (): SiteSettings => React.useContext(AppCtx);
 
 export default Provider;

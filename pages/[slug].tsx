@@ -75,8 +75,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params;
   const path = Array.isArray(slug) ? slug[0] : slug; // TODO:
-  const siteData = getSiteData();
-  const pageData = getPageData(path || 'home');
+  const siteData = await getSiteData();
+  const pageData = await getPageData(path || 'home');
   if (pageData.data) {
     return {
       props: { pageData, siteData },

@@ -2,7 +2,7 @@ import React from 'react';
 import { MetaProps } from '../types/layout';
 import Head from './Head';
 import Navigation from './Navigation';
-import GiveAway from './modules/GiveAway';
+// import GiveAway from './modules/GiveAway';
 import CallToAction from 'components/modules/CallToAction';
 import Footer from 'components/modules/Footer';
 //import ThemeSwitch from './ThemeSwitch';
@@ -27,7 +27,7 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
       <main className="md:pt-20">{children}</main>
 
       <CallToAction />
-      <GiveAway />
+      {/* <GiveAway /> */}
       <Footer />
     </>
   );

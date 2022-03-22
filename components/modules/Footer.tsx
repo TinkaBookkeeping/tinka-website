@@ -27,7 +27,7 @@ const Footer = (): JSX.Element => {
               <FooterLink label="Home" href="/" />
               <FooterLink label="Bookkeeping" href="/bookkeeping" />
               <FooterLink label="Our team" href="/team" />
-              <FooterLink label="About us" href="/about-us" />
+              <FooterLink label="About us" href="/about" />
               <FooterLink label="Contact us" href="/contact" />
             </ul>
           </nav>

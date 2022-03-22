@@ -23,6 +23,6 @@ const Provider = ({
   <AppCtx.Provider value={sampleAppContext}>{children}</AppCtx.Provider>
 );
 
-export const useGlobalContent = () => React.useContext(AppCtx);
+export const useGlobalContent = (): GlobalContent => React.useContext(AppCtx);
 
 export default Provider;
