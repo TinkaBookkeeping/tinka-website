@@ -9,7 +9,7 @@ sections:
       payruns. That’s why we use the latest software and proprietry workflow to
       ensure that your books are kept up to date faster than ever. '
     photo: ''
-    buttonLabel: Lets get stated
+    buttonLabel: Let's get stated
     buttonLink: /contact
     style: dark
   - type: 2col

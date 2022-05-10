@@ -6,7 +6,7 @@ sections:
     subtitle: 'Tinka’s team of experts work with SMEs to deliver reliable,
       stress-free bookkeeping. '
     photo: /media/hero-image.png
-    buttonLabel: Lets get stated
+    buttonLabel: Let's get stated
     buttonLink: /contact
     style: light
   - type: grid-text
