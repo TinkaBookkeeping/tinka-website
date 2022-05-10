@@ -3,5 +3,5 @@
 module.exports = {
   siteUrl: process.env.URL || 'http://tinkabookkeeping.com',
   generateRobotsTxt: true,
-  exclude: ['/server-sitemap-index.xml', 'cms'],
+  exclude: ['/server-sitemap-index.xml', '/cms'],
 };
