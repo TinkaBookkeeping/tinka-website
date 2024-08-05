@@ -50,9 +50,9 @@ sections:
     content: Engaging TINKA was an absolute turning point in our business. The
       processes we’ve put in place since then have been a huge contributor to
       the success of the agency.
-    name: Sam Wood
-    role: Managing Director
-    company: Alpha Digital
+    name: Brent Wallace
+    role: Founder
+    company: Hatch Head
     image: /media/zoom.png
 pageAttributes:
   publish_date: 2021-12-13T01:22:52.790Z
